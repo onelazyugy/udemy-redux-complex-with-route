@@ -1,0 +1,11 @@
+npm install
+npm start
+localhost:8080
+
+TEST API 
+---------
+http://reduxblog.herokuapp.com/
+http://reduxblog.herokuapp.com/api/posts?key=1050  <---key
+
+
+npm install --save react-router-dom@4.0.0
