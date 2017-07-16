@@ -8,7 +8,7 @@ const API_KEY = '?key=1050';
 export function fetchPosts() {
     const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);//request is a promise not the actual data, redux promise will resolve into the data response
     return {    
-        type: 'FETCH_POSTS',
+        type: FETCH_POSTS,
         payload: request
     };
 }
