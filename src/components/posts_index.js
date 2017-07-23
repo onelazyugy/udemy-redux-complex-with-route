@@ -27,7 +27,8 @@ class PostsIndex extends Component {
                 <div className="text-xs-right">
                     <Link to="/posts/new" className="btn btn-primary">
                         Add a Posts
-                    </Link>
+                    </Link>&nbsp;
+                    <Link to="/sandbox" className="btn btn-primary">SANDBOX</Link>
                 </div>
                 <h3>Posts</h3>
                 <ul className="list-group">

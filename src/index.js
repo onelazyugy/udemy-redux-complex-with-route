@@ -11,7 +11,7 @@ import reducers from './reducers';
 import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
-
+import Sandbox from './components/sandbox';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -22,6 +22,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/posts/new" component={PostsNew} /> {/* most specific need to be at the top */}
           <Route path="/posts/:id" component={PostsShow} /> {/* route order is very important, else you get wrong route */}
+          <Route path="/sandbox" component={Sandbox} />
           <Route path="/" component={PostsIndex} />
         </Switch>
       </div>
