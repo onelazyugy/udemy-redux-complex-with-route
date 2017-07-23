@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
-import Panel from 'muicss/lib/react/panel';
 import Notification from './notification';
 
 class Sandbox extends Component {
@@ -30,9 +29,7 @@ class Sandbox extends Component {
         return (
             <div>
                 <Notification bgColor={notificationBgColor} icon={notificationIconUrl} showNotification={this.state.showNotification} msg={notificationMessage} onCloseClick={this.onNotificationClose}/>
-                <Panel>
-                    {<div>SANDBOX CONTENT</div>}
-                </Panel>
+                <div>SANDBOX CONTENT</div>
             </div>
         );
     }
