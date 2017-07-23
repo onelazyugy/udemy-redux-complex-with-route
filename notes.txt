@@ -9,3 +9,9 @@ http://reduxblog.herokuapp.com/api/posts?key=1050  <---key
 
 
 npm install --save react-router-dom@4.0.0
+
+
+redux form
+pristine - not yet selected
+touched - user has selected and focus out of input
+invalid - errror
