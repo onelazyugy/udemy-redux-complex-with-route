@@ -5,19 +5,33 @@ import Col from 'muicss/lib/react/col';
 import Panel from 'muicss/lib/react/panel';
 import FontAwesome from 'react-fontawesome';
 
-export default ({bgColor, icon, showNotification, msg, onCloseClick}) => {
+export default ({autoCloseMilli, enableAutoClose, bgColor, icon, showNotification, msg, onCloseClick}) => {
     let showComponent = {
         'display': 'none',
         'backgroundColor': bgColor
     }
+
     if(showNotification) {
         showComponent = {
             'display': '',
             'backgroundColor': bgColor
         }
     } 
+
     const colorcheck = {
         'color': 'green'
+    }
+
+    if(enableAutoClose) {
+        let counter = 1000;
+        let interval = setInterval(()=>{
+            counter += 1000;
+            console.log('counter: ' + counter);
+            if(counter === autoCloseMilli){
+                clearInterval(interval);
+                onCloseClick();
+            }
+        },autoCloseMilli);
     }
 
     return (
